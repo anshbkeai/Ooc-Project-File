@@ -4,7 +4,8 @@
 #include <openssl/rand.h>
 #include <iomanip>
 #include <cstring>
-
+// to compile : g++ -o aes_example aes_example.cpp -I/usr/lib/ssl -lssl -lcrypto
+// run 
 //  function to print data in hexadecimal
 // after encrypt or decrypt data, the result is typically raw binary data,
 // converting each byte into a two-digit hexadecimal representation.
