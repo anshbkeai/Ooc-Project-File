@@ -6,7 +6,7 @@
 using  namespace  std;
 
 class Token {
-    private  :
+    public  :
         string sender;
         string reciver;
         string  issue_time;
@@ -22,6 +22,6 @@ class Token {
         this->file_format  =  file_format; //  we  will  get   from  the   File   serive  
     }
     string  genrate_Token();
-    bool  validate_Token(string  token,string  sender_1);
+   
 };
 #endif

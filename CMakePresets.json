@@ -1,16 +1,18 @@
+
 {
     "version": 3,
     "configurePresets": [
         {
             "name": "default",
-            "generator": "MinGW Makefiles",   
+            "generator": "MinGW Makefiles",
             "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "C:/MinGW/bin/gcc.exe",
-                "CMAKE_CXX_COMPILER": "C:/MinGW/bin/g++.exe",
-                "CMAKE_CXX_STANDARD": "17",
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+                "CMAKE_CXX_STANDARD": "17",     
+                "CMAKE_BUILD_TYPE": "Debug"       
             }
         }
     ]
 }
+

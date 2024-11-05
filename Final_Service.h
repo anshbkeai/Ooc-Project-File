@@ -5,13 +5,16 @@
 #include <string>
 #include "Token.h"
 #include "Timer.h"
-//#include "File.h"  // Assuming File.h contains the definition for the File class
-//#include "Token_service.h"
+
+#include "aes_file.h"  // Assuming File.h contains the definition for the File class
+#include "Token_service.h"
 
 class Service {
-   // File file;  // File object to handle file operations
-   //Test  token_service;
+    File file;  // File object to handle file operations
+    Test token_service;
    Timer  time;
+//    Logger log;
+
 
 public:
     // Encrypt function
@@ -25,23 +28,28 @@ public:
 
         // cout<<"CALLING  FOR  THE COMPARE  OF  THE   TIMERS "<<time.compareDates("10 18 15:10:36 2024");
         // File operations for encryption would go here
-        /*
+
+      //  log.info("Called  FileService   Class  to  encrpty ");
+        string  e_token  =  token_service.genrate_Token(token);
         
         string  encrypted_token  =   token_service.genrate_Token(token);
         return   file.encrypt_file(input_file_path,output_file_path,e_token);
-        */
-        return true;
+        
+        
     }
 
     // Decrypt function
-    bool Decrypt(std::string user, std::string sender, std::string input_file_path, 
+    bool Decrypt(std::string sender, std::string input_file_path, 
                  std::string output_file_path) {
-        std::cout << "Decrypting file for user: " << user << std::endl;
+        std::cout << "Decrypting file for user: " << sender << std::endl;
         // File operations for decryption would go here
+       // log.info("Called  FileService   Class  to  Decrypt ");
+        return   file.decrypt_file(input_file_path,  output_file_path,sender);
 
-        //  return   file.decrypt_file(input_file_path,  output_file_path);
         return true;
     }
 };
 
+
 #endif // FINAL_SERVICE_H
+
