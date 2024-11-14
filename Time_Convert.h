@@ -12,9 +12,7 @@ using  namespace  std;
 
 // Function to get formatted expiration time from user
 
-
 class  e_time {
-
     public:
         string formatExpirationTime() {
     // Create a tm structure
